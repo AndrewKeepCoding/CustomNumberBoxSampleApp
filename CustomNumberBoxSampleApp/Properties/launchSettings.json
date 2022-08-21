@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "CustomNumberBoxSampleApp (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "CustomNumberBoxSampleApp (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
