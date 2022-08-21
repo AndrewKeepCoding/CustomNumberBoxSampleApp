@@ -5,16 +5,23 @@ VisualStudioVersion = 17.2.32602.215
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomNumberBoxSampleApp", "CustomNumberBoxSampleApp\CustomNumberBoxSampleApp.csproj", "{1894DC2E-583D-4744-97B5-4C3CE71CD058}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomControls", "CustomControls\CustomControls.csproj", "{0E6734FF-8E87-480F-A5EB-7667224AACB2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
 		Debug|arm64 = Debug|arm64
 		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
 		Release|arm64 = Release|arm64
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1894DC2E-583D-4744-97B5-4C3CE71CD058}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{1894DC2E-583D-4744-97B5-4C3CE71CD058}.Debug|Any CPU.Build.0 = Debug|x64
+		{1894DC2E-583D-4744-97B5-4C3CE71CD058}.Debug|Any CPU.Deploy.0 = Debug|x64
 		{1894DC2E-583D-4744-97B5-4C3CE71CD058}.Debug|arm64.ActiveCfg = Debug|arm64
 		{1894DC2E-583D-4744-97B5-4C3CE71CD058}.Debug|arm64.Build.0 = Debug|arm64
 		{1894DC2E-583D-4744-97B5-4C3CE71CD058}.Debug|arm64.Deploy.0 = Debug|arm64
@@ -24,6 +31,9 @@ Global
 		{1894DC2E-583D-4744-97B5-4C3CE71CD058}.Debug|x86.ActiveCfg = Debug|x86
 		{1894DC2E-583D-4744-97B5-4C3CE71CD058}.Debug|x86.Build.0 = Debug|x86
 		{1894DC2E-583D-4744-97B5-4C3CE71CD058}.Debug|x86.Deploy.0 = Debug|x86
+		{1894DC2E-583D-4744-97B5-4C3CE71CD058}.Release|Any CPU.ActiveCfg = Release|x64
+		{1894DC2E-583D-4744-97B5-4C3CE71CD058}.Release|Any CPU.Build.0 = Release|x64
+		{1894DC2E-583D-4744-97B5-4C3CE71CD058}.Release|Any CPU.Deploy.0 = Release|x64
 		{1894DC2E-583D-4744-97B5-4C3CE71CD058}.Release|arm64.ActiveCfg = Release|arm64
 		{1894DC2E-583D-4744-97B5-4C3CE71CD058}.Release|arm64.Build.0 = Release|arm64
 		{1894DC2E-583D-4744-97B5-4C3CE71CD058}.Release|arm64.Deploy.0 = Release|arm64
@@ -33,6 +43,22 @@ Global
 		{1894DC2E-583D-4744-97B5-4C3CE71CD058}.Release|x86.ActiveCfg = Release|x86
 		{1894DC2E-583D-4744-97B5-4C3CE71CD058}.Release|x86.Build.0 = Release|x86
 		{1894DC2E-583D-4744-97B5-4C3CE71CD058}.Release|x86.Deploy.0 = Release|x86
+		{0E6734FF-8E87-480F-A5EB-7667224AACB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E6734FF-8E87-480F-A5EB-7667224AACB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E6734FF-8E87-480F-A5EB-7667224AACB2}.Debug|arm64.ActiveCfg = Debug|Any CPU
+		{0E6734FF-8E87-480F-A5EB-7667224AACB2}.Debug|arm64.Build.0 = Debug|Any CPU
+		{0E6734FF-8E87-480F-A5EB-7667224AACB2}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{0E6734FF-8E87-480F-A5EB-7667224AACB2}.Debug|x64.Build.0 = Debug|Any CPU
+		{0E6734FF-8E87-480F-A5EB-7667224AACB2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0E6734FF-8E87-480F-A5EB-7667224AACB2}.Debug|x86.Build.0 = Debug|Any CPU
+		{0E6734FF-8E87-480F-A5EB-7667224AACB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E6734FF-8E87-480F-A5EB-7667224AACB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E6734FF-8E87-480F-A5EB-7667224AACB2}.Release|arm64.ActiveCfg = Release|Any CPU
+		{0E6734FF-8E87-480F-A5EB-7667224AACB2}.Release|arm64.Build.0 = Release|Any CPU
+		{0E6734FF-8E87-480F-A5EB-7667224AACB2}.Release|x64.ActiveCfg = Release|Any CPU
+		{0E6734FF-8E87-480F-A5EB-7667224AACB2}.Release|x64.Build.0 = Release|Any CPU
+		{0E6734FF-8E87-480F-A5EB-7667224AACB2}.Release|x86.ActiveCfg = Release|Any CPU
+		{0E6734FF-8E87-480F-A5EB-7667224AACB2}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

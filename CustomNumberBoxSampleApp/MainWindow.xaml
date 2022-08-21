@@ -2,6 +2,7 @@
     x:Class="CustomNumberBoxSampleApp.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="using:CustomControls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:formatters="using:Windows.Globalization.NumberFormatting"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -27,6 +28,7 @@
                 FractionDigits="1"
                 NumberRounder="{StaticResource IncrementNumberRounder}" />
         </StackPanel.Resources>
+        <!--  TextBox  -->
         <StackPanel
             Grid.Column="0"
             HorizontalAlignment="Center"
@@ -40,13 +42,14 @@
                 </Style>
             </StackPanel.Resources>
             <TextBlock Style="{StaticResource HeaderTextBlockStyle}" Text="TextBox" />
-            <TextBlock Text="TextAlignment = Right" />
+            <TextBlock Text="TextAlignment = Right😮" />
             <TextBox Text="1.0" />
             <TextBox Text="12.0" />
             <TextBox Text="123.0" />
             <TextBox Text="1234.0" />
             <TextBox Text="12345.0" />
         </StackPanel>
+        <!--  NumberBox  -->
         <StackPanel
             Grid.Column="1"
             HorizontalAlignment="Center"
@@ -59,12 +62,33 @@
                 </Style>
             </StackPanel.Resources>
             <TextBlock Style="{StaticResource HeaderTextBlockStyle}" Text="NumberBox" />
-            <TextBlock Text="Horizontal alignment is still preview and doesn't work" />
+            <TextBlock Text="Horizontal alignment is still preview and doesn't work.😥" />
             <NumberBox NumberFormatter="{StaticResource DecimalFormatter}" Value="1.0" />
             <NumberBox NumberFormatter="{StaticResource DecimalFormatter}" Value="12.0" />
             <NumberBox NumberFormatter="{StaticResource DecimalFormatter}" Value="123.0" />
             <NumberBox NumberFormatter="{StaticResource DecimalFormatter}" Value="1234.0" />
             <NumberBox NumberFormatter="{StaticResource DecimalFormatter}" Value="12345.0" />
+        </StackPanel>
+        <!--  CustomNumberBox  -->
+        <StackPanel
+            Grid.Column="1"
+            HorizontalAlignment="Center"
+            Orientation="Vertical"
+            Spacing="10">
+            <StackPanel.Resources>
+                <Style TargetType="controls:CustomNumberBox">
+                    <Setter Property="HorizontalAlignment" Value="Left" />
+                    <Setter Property="HorizontalContentAlignment" Value="Right" />
+                    <Setter Property="Width" Value="{StaticResource ControlWidth}" />
+                </Style>
+            </StackPanel.Resources>
+            <TextBlock Style="{StaticResource HeaderTextBlockStyle}" Text="CustomNumberBox" />
+            <TextBlock Text="Horizontal alignment implented using the VisualTreeHelper.😎" />
+            <controls:CustomNumberBox NumberFormatter="{StaticResource DecimalFormatter}" Value="1.0" />
+            <controls:CustomNumberBox NumberFormatter="{StaticResource DecimalFormatter}" Value="12.0" />
+            <controls:CustomNumberBox NumberFormatter="{StaticResource DecimalFormatter}" Value="123.0" />
+            <controls:CustomNumberBox NumberFormatter="{StaticResource DecimalFormatter}" Value="1234.0" />
+            <controls:CustomNumberBox NumberFormatter="{StaticResource DecimalFormatter}" Value="12345.0" />
         </StackPanel>
     </StackPanel>
 
