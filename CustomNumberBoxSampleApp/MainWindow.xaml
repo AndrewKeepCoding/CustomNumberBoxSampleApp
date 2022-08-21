@@ -9,7 +9,7 @@
     mc:Ignorable="d">
 
     <StackPanel
-        Margin="50"
+        Margin="20"
         Orientation="Horizontal"
         Spacing="30">
         <StackPanel.Resources>
@@ -82,8 +82,11 @@
                     <Setter Property="Width" Value="{StaticResource ControlWidth}" />
                 </Style>
             </StackPanel.Resources>
-            <TextBlock Style="{StaticResource HeaderTextBlockStyle}" Text="CustomNumberBox" />
-            <TextBlock Text="Horizontal alignment implented using the VisualTreeHelper.😎" />
+            <TextBlock
+                Foreground="HotPink"
+                Style="{StaticResource HeaderTextBlockStyle}"
+                Text="CustomNumberBox" />
+            <TextBlock Text="Horizontal alignment using the VisualTreeHelper.😎" />
             <controls:CustomNumberBox NumberFormatter="{StaticResource DecimalFormatter}" Value="1.0" />
             <controls:CustomNumberBox NumberFormatter="{StaticResource DecimalFormatter}" Value="12.0" />
             <controls:CustomNumberBox NumberFormatter="{StaticResource DecimalFormatter}" Value="123.0" />
