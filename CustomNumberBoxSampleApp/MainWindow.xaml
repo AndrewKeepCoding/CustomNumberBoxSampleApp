@@ -3,33 +3,31 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:formatters="using:Windows.Globalization.NumberFormatting"
+    xmlns:local="using:CustomNumberBoxSampleApp"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <StackPanel
-        Margin="50"
-        Orientation="Horizontal"
-        Spacing="30">
-        <StackPanel.Resources>
-            <x:Double x:Key="ControlWidth">100.0</x:Double>
+    <Grid
+        Margin="10"
+        ColumnDefinitions="*,3*"
+        RowDefinitions="Auto,Auto">
+        <Grid.Resources>
+            <x:Double x:Key="ControlWidth">150.0</x:Double>
             <Style x:Key="HeaderTextBlockStyle" TargetType="TextBlock">
-                <Setter Property="FontSize" Value="20" />
+                <Setter Property="FontSize" Value="30" />
                 <Setter Property="FontWeight" Value="Bold" />
                 <Setter Property="Foreground" Value="{ThemeResource SystemAccentColor}" />
             </Style>
-            <formatters:IncrementNumberRounder
-                x:Key="IncrementNumberRounder"
-                Increment="1.0"
-                RoundingAlgorithm="RoundUp" />
-            <formatters:DecimalFormatter
-                x:Key="DecimalFormatter"
-                FractionDigits="1"
-                NumberRounder="{StaticResource IncrementNumberRounder}" />
-        </StackPanel.Resources>
+            <Style TargetType="TextBlock">
+                <Setter Property="FontSize" Value="20" />
+            </Style>
+        </Grid.Resources>
+        <!--  TextBox  -->
         <StackPanel
+            Grid.Row="0"
             Grid.Column="0"
-            HorizontalAlignment="Center"
+            Margin="10"
+            HorizontalAlignment="Left"
             Orientation="Vertical"
             Spacing="10">
             <StackPanel.Resources>
@@ -41,31 +39,153 @@
             </StackPanel.Resources>
             <TextBlock Style="{StaticResource HeaderTextBlockStyle}" Text="TextBox" />
             <TextBlock Text="TextAlignment = Right" />
-            <TextBox Text="1.0" />
-            <TextBox Text="12.0" />
-            <TextBox Text="123.0" />
-            <TextBox Text="1234.0" />
-            <TextBox Text="12345.0" />
+            <TextBox Text="1" />
+            <TextBox Text="12" />
+            <TextBox Text="123" />
+            <TextBox Text="1234" />
+            <TextBox Text="12345" />
         </StackPanel>
+        <!--  NumberBox  -->
         <StackPanel
+            Grid.Row="0"
             Grid.Column="1"
-            HorizontalAlignment="Center"
+            Margin="10"
+            HorizontalAlignment="Left"
             Orientation="Vertical"
             Spacing="10">
-            <StackPanel.Resources>
-                <Style TargetType="NumberBox">
-                    <Setter Property="HorizontalAlignment" Value="Left" />
-                    <Setter Property="Width" Value="{StaticResource ControlWidth}" />
-                </Style>
-            </StackPanel.Resources>
             <TextBlock Style="{StaticResource HeaderTextBlockStyle}" Text="NumberBox" />
-            <TextBlock Text="Horizontal alignment is still preview and doesn't work" />
-            <NumberBox NumberFormatter="{StaticResource DecimalFormatter}" Value="1.0" />
-            <NumberBox NumberFormatter="{StaticResource DecimalFormatter}" Value="12.0" />
-            <NumberBox NumberFormatter="{StaticResource DecimalFormatter}" Value="123.0" />
-            <NumberBox NumberFormatter="{StaticResource DecimalFormatter}" Value="1234.0" />
-            <NumberBox NumberFormatter="{StaticResource DecimalFormatter}" Value="12345.0" />
+            <Grid ColumnDefinitions="300,300,300">
+                <StackPanel
+                    Grid.Column="0"
+                    Orientation="Vertical"
+                    Spacing="10">
+                    <StackPanel.Resources>
+                        <Style TargetType="NumberBox">
+                            <Setter Property="HorizontalAlignment" Value="Left" />
+                            <Setter Property="SpinButtonPlacementMode" Value="Hidden" />
+                            <Setter Property="Width" Value="{StaticResource ControlWidth}" />
+                            <Setter Property="HorizontalContentAlignment" Value="Right" />
+                        </Style>
+                    </StackPanel.Resources>
+                    <TextBlock Text="SpinButton: Hidden" />
+                    <NumberBox Value="1" />
+                    <NumberBox Value="12" />
+                    <NumberBox Value="123" />
+                    <NumberBox Value="1234" />
+                    <NumberBox Value="12345" />
+                </StackPanel>
+                <StackPanel
+                    Grid.Column="1"
+                    Orientation="Vertical"
+                    Spacing="10">
+                    <StackPanel.Resources>
+                        <Style TargetType="NumberBox">
+                            <Setter Property="HorizontalAlignment" Value="Left" />
+                            <Setter Property="SpinButtonPlacementMode" Value="Compact" />
+                            <Setter Property="Width" Value="{StaticResource ControlWidth}" />
+                            <Setter Property="HorizontalContentAlignment" Value="Right" />
+                        </Style>
+                    </StackPanel.Resources>
+                    <TextBlock Text="SpinButton: Compact" />
+                    <NumberBox Value="1" />
+                    <NumberBox Value="12" />
+                    <NumberBox Value="123" />
+                    <NumberBox Value="1234" />
+                    <NumberBox Value="12345" />
+                </StackPanel>
+                <StackPanel
+                    Grid.Column="2"
+                    Orientation="Vertical"
+                    Spacing="10">
+                    <StackPanel.Resources>
+                        <Style TargetType="NumberBox">
+                            <Setter Property="HorizontalAlignment" Value="Left" />
+                            <Setter Property="SpinButtonPlacementMode" Value="Inline" />
+                            <Setter Property="Width" Value="{StaticResource ControlWidth}" />
+                            <Setter Property="HorizontalContentAlignment" Value="Right" />
+                        </Style>
+                    </StackPanel.Resources>
+                    <TextBlock Text="SpinButton: Inline" />
+                    <NumberBox Value="1" />
+                    <NumberBox Value="12" />
+                    <NumberBox Value="123" />
+                    <NumberBox Value="1234" />
+                    <NumberBox Value="12345" />
+                </StackPanel>
+            </Grid>
         </StackPanel>
-    </StackPanel>
+        <!--  CustomNumberBox  -->
+        <StackPanel
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="10"
+            HorizontalAlignment="Left"
+            Orientation="Vertical"
+            Spacing="10">
+            <TextBlock
+                Foreground="HotPink"
+                Style="{StaticResource HeaderTextBlockStyle}"
+                Text="CustomNumberBox" />
+            <Grid ColumnDefinitions="300,300,300">
+                <StackPanel
+                    Grid.Column="0"
+                    Orientation="Vertical"
+                    Spacing="10">
+                    <StackPanel.Resources>
+                        <Style TargetType="local:CustomNumberBox">
+                            <Setter Property="HorizontalAlignment" Value="Left" />
+                            <Setter Property="SpinButtonPlacementMode" Value="Hidden" />
+                            <Setter Property="Width" Value="{StaticResource ControlWidth}" />
+                            <Setter Property="HorizontalContentAlignment" Value="Right" />
+                        </Style>
+                    </StackPanel.Resources>
+                    <TextBlock Text="SpinButton: Hidden" />
+                    <local:CustomNumberBox Value="1" />
+                    <local:CustomNumberBox Value="12" />
+                    <local:CustomNumberBox Value="123" />
+                    <local:CustomNumberBox Value="1234" />
+                    <local:CustomNumberBox Value="12345" />
+                </StackPanel>
+                <StackPanel
+                    Grid.Column="1"
+                    Orientation="Vertical"
+                    Spacing="10">
+                    <StackPanel.Resources>
+                        <Style TargetType="local:CustomNumberBox">
+                            <Setter Property="HorizontalAlignment" Value="Left" />
+                            <Setter Property="SpinButtonPlacementMode" Value="Compact" />
+                            <Setter Property="Width" Value="{StaticResource ControlWidth}" />
+                            <Setter Property="HorizontalContentAlignment" Value="Right" />
+                        </Style>
+                    </StackPanel.Resources>
+                    <TextBlock Text="SpinButton: Compact" />
+                    <local:CustomNumberBox Value="1" />
+                    <local:CustomNumberBox Value="12" />
+                    <local:CustomNumberBox Value="123" />
+                    <local:CustomNumberBox Value="1234" />
+                    <local:CustomNumberBox Value="12345" />
+                </StackPanel>
+                <StackPanel
+                    Grid.Column="2"
+                    Orientation="Vertical"
+                    Spacing="10">
+                    <StackPanel.Resources>
+                        <Style TargetType="local:CustomNumberBox">
+                            <Setter Property="HorizontalAlignment" Value="Left" />
+                            <Setter Property="SpinButtonPlacementMode" Value="Inline" />
+                            <Setter Property="Width" Value="{StaticResource ControlWidth}" />
+                            <Setter Property="HorizontalContentAlignment" Value="Right" />
+                        </Style>
+                    </StackPanel.Resources>
+                    <TextBlock Text="SpinButton: Inline" />
+                    <local:CustomNumberBox Value="1" />
+                    <local:CustomNumberBox Value="12" />
+                    <local:CustomNumberBox Value="123" />
+                    <local:CustomNumberBox Value="1234" />
+                    <local:CustomNumberBox Value="12345" />
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+    </Grid>
 
 </Window>
