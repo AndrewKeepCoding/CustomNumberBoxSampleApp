@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32602.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomNumberBoxSampleApp", "CustomNumberBoxSampleApp\CustomNumberBoxSampleApp.csproj", "{1894DC2E-583D-4744-97B5-4C3CE71CD058}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomControls", "CustomControls\CustomControls.csproj", "{0E6734FF-8E87-480F-A5EB-7667224AACB2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomNumberBoxSampleApp", "CustomNumberBoxSampleApp\CustomNumberBoxSampleApp.csproj", "{1894DC2E-583D-4744-97B5-4C3CE71CD058}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,22 +41,6 @@ Global
 		{1894DC2E-583D-4744-97B5-4C3CE71CD058}.Release|x86.ActiveCfg = Release|x86
 		{1894DC2E-583D-4744-97B5-4C3CE71CD058}.Release|x86.Build.0 = Release|x86
 		{1894DC2E-583D-4744-97B5-4C3CE71CD058}.Release|x86.Deploy.0 = Release|x86
-		{0E6734FF-8E87-480F-A5EB-7667224AACB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0E6734FF-8E87-480F-A5EB-7667224AACB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0E6734FF-8E87-480F-A5EB-7667224AACB2}.Debug|arm64.ActiveCfg = Debug|Any CPU
-		{0E6734FF-8E87-480F-A5EB-7667224AACB2}.Debug|arm64.Build.0 = Debug|Any CPU
-		{0E6734FF-8E87-480F-A5EB-7667224AACB2}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{0E6734FF-8E87-480F-A5EB-7667224AACB2}.Debug|x64.Build.0 = Debug|Any CPU
-		{0E6734FF-8E87-480F-A5EB-7667224AACB2}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{0E6734FF-8E87-480F-A5EB-7667224AACB2}.Debug|x86.Build.0 = Debug|Any CPU
-		{0E6734FF-8E87-480F-A5EB-7667224AACB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0E6734FF-8E87-480F-A5EB-7667224AACB2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0E6734FF-8E87-480F-A5EB-7667224AACB2}.Release|arm64.ActiveCfg = Release|Any CPU
-		{0E6734FF-8E87-480F-A5EB-7667224AACB2}.Release|arm64.Build.0 = Release|Any CPU
-		{0E6734FF-8E87-480F-A5EB-7667224AACB2}.Release|x64.ActiveCfg = Release|Any CPU
-		{0E6734FF-8E87-480F-A5EB-7667224AACB2}.Release|x64.Build.0 = Release|Any CPU
-		{0E6734FF-8E87-480F-A5EB-7667224AACB2}.Release|x86.ActiveCfg = Release|Any CPU
-		{0E6734FF-8E87-480F-A5EB-7667224AACB2}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
